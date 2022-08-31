@@ -10,6 +10,11 @@ app.use(bodyParser.json())
 
 console.log('server live')
 
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log('Server listening on http://localhost:' + PORT)
+})
+
 app.post("/refresh", (req, res) => {
 
     console.log('hi')
@@ -57,9 +62,5 @@ app.post('/login', (req, res) => {
     })
 })
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log('Server listening on http://localhost:' + PORT)
-})
 
 // app.listen("https://acoustify-oauth.onrender.com/")
