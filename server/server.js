@@ -57,4 +57,9 @@ app.post('/login', (req, res) => {
     })
 })
 
-app.listen("https://acoustify-oauth.onrender.com/")
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log('Server listening on http://localhost:' + PORT)
+})
+
+// app.listen("https://acoustify-oauth.onrender.com/")
