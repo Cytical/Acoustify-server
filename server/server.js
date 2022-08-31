@@ -57,4 +57,4 @@ app.post('/login', (req, res) => {
     })
 })
 
-app.listen("https://acoustify.onrender.com/api")
+app.listen("https://acoustify-oauth.onrender.com/")
