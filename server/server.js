@@ -10,10 +10,6 @@ app.use(bodyParser.json())
 
 console.log('server live')
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log('Server listening on http://localhost:' + PORT)
-})
 
 app.post("/refresh", (req, res) => {
 
@@ -64,6 +60,11 @@ app.post('/login', (req, res) => {
 
 app.use((req, res) => {
   res.send('Hello World!')
+})
+
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log('Server listening on http://localhost:' + PORT)
 })
 
 
