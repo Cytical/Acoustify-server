@@ -58,9 +58,7 @@ app.post('/login', (req, res) => {
     })
 })
 
-app.use((req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => res.send("API REQ"));
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
